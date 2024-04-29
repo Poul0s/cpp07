@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:06:11 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/29 14:41:49 by psalame          ###   ########.fr       */
+/*   Updated: 2024/04/29 14:45:42 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,6 @@ int	main(void)
 	int	test_nb = 1;
 
 	test_launcher(exit_code, &test1, test_nb++);
-	std::cout << std::endl;
 
 	return exit_code;
 }
