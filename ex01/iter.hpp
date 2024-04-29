@@ -1,30 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   whatever.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/29 14:04:14 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/29 14:40:41 by psalame          ###   ########.fr       */
+/*   Created: 2024/04/29 14:33:37 by psalame           #+#    #+#             */
+/*   Updated: 2024/04/29 14:41:18 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef WHATEVER_HPP
-# define WHATEVER_HPP
+#ifndef ITER_HPP
+# define ITER_HPP
+# include <cstddef>
+
 
 template<class T>
-void	swap(T &a, T &b)
+void	iter(T *arr, size_t len, void (*f) (T &ele))
 {
-	T	tmp = a;
-	a = b;
-	b = tmp;
-};
-
-template<class T>
-T	&min(T &a, T &b){ return (a < b ? a : b); }
-
-template<class T>
-T	&max(T &a, T &b){ return (a > b ? a : b); }
+	for (size_t i = 0; i < len; i++)
+		(*f)(arr[i]);
+}
 
 #endif
