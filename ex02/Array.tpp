@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 18:23:22 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/29 18:23:30 by psalame          ###   ########.fr       */
+/*   Updated: 2024/05/20 14:34:07 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,11 +69,19 @@ T		&Array<T>::operator[](unsigned int i)
 	return (this->_arr[i]);
 }
 
+template<class T>
+const T		&Array<T>::operator[](unsigned int i) const
+{
+	if (i >= this->_size)
+		throw std::exception();
+	return (this->_arr[i]);
+}
+
 
 // member function
 
 template<class T>
-unsigned int	Array<T>::size(void)
+unsigned int	Array<T>::size(void) const
 {
 	return this->_size;
 }

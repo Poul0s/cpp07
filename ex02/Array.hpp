@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 15:30:02 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/29 18:23:39 by psalame          ###   ########.fr       */
+/*   Updated: 2024/05/20 14:34:01 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,9 @@ class Array {
 
 		Array	&operator=(const Array &copy);
 		T		&operator[](unsigned int i);
+		const T		&operator[](unsigned int i) const;
 
-		unsigned int	size(void);
+		unsigned int	size(void) const;
 	
 	private:
 		unsigned int	_size;

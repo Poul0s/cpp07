@@ -6,7 +6,7 @@
 /*   By: psalame <psalame@student.42angouleme.fr    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/29 14:06:11 by psalame           #+#    #+#             */
-/*   Updated: 2024/04/29 16:54:14 by psalame          ###   ########.fr       */
+/*   Updated: 2024/05/20 14:33:26 by psalame          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,7 +83,7 @@ void	test5(int &exit_code)
 	arr[0] = str0;
 	arr[1] = str1;
 
-	Array<std::string>	arrCopy(arr);
+	const Array<std::string>	arrCopy(arr);
 	if (arrCopy[0] != str0 || arrCopy[1] != str1 || arrCopy.size() != arr.size())
 	{
 		exit_code++;
